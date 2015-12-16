@@ -13,6 +13,7 @@ import android.widget.EditText;
 
 
 public class MyActivity extends AppCompatActivity {
+    public final static String EXTRA_MESSAGE = "osmiyaki.myfirstapp.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,5 +61,6 @@ public class MyActivity extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 }
